@@ -17,7 +17,7 @@ def count_repetitions(words_list):
         word_count_dict[word] += 1
     return number_words
 
-
+@set_path_log('data/logs.txt')
 def top_ten_words(count_repetitions_dict):
     words_set = set()
     for i in count_repetitions_dict.values():
