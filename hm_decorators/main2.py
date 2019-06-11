@@ -10,7 +10,7 @@ def set_path_log(path):
             with open(path, 'a', encoding='utf8')as f:
                 time_start = datetime.isoformat(datetime.now(), sep=' ')
                 f.write(
-                    f"{time_start} function name: {new_function.__name__} attributes: {args}{kwargs} result: {result}\n")
+                    f"{time_start} function name: {old_function.__name__} attributes: {args}{kwargs} result: {result}\n")
             return result
         return new_function
     return log
