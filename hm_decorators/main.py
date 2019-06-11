@@ -9,7 +9,7 @@ def log(old_function):
         with open('data/log.txt', 'a', encoding='utf8')as f:
             time_start = datetime.isoformat(datetime.now(), sep=' ')
             f.write(
-                f"{time_start} function name: {new_function.__name__} attributes: {args}{kwargs} result: {result}\n")
+                f"{time_start} function name: {old_function.__name__} attributes: {args}{kwargs} result: {result}\n")
         return result
     return new_function
 
